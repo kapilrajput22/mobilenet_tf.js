@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load TensorFlow.js. This is required to use MobileNet. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"> </script>
+<!-- Load the MobileNet model. -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@0.1.1"> </script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<meta charset=utf-8 />
+</head>
+<main>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="progress progress-bar progress-bar-striped progress-bar-animated mb-2">MobileNet Model</div>
+            </div>
+        </div>
+</div>
+
+        <div class="row">
+            <input id ="image-selector" class="form-control border-0" type="file" onchange="readURL(this);" />
+            </div>
+
+            <div class="col-6">
+                <button id="predict-button" class="btn btn-dark float-right">Predict</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="ml-3">Image</h2>
+                <img id="selected-image" class="ml-3" src="#"  width=400 height=400/></img>
+            </div>
+        </div>
+    </div>
+<p id="class"></p>
+<p id="probability"></p>
+</main>
+<script src="tf_predict.js"></script>
+
+
+	
